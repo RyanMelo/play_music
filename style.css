@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    background-color: rgba(5, 5, 5, 0.938);
+}
+
+div.logo > a{
+    margin: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo h2{
+    margin-top: 3px;
+    margin-left: 20px;
+}
+
+.menu{
+    color: rgb(192, 192, 192);
+    width: 250px;
+    height: 100vh;
+    background-color:  rgba(0, 0, 0, 0.952);
+}
+
+.menu .itens-menu{
+    margin-top: 15px;
+    margin-left: 30px;
+    list-style: none;
+    line-height: 45px;
+    font-size: 18px;
+}
+
+.menu span{
+    margin-left: 10px;
+}
+
+.menu h3{
+    margin: 20px 0 10px 20px;
+    font-size: 15px;
+}
+
+.menu .menu-playlist{
+    margin-left: 30px;
+    list-style: none;
+    line-height: 45px;
+    font-size: 18px;
+}
+
+li{transition: 0.5s;}
+
+li i{font-size: 20px;}
+
+li:hover{
+    color: white;
+    cursor: pointer;
+}
+
+
+/*Menu celular*/
+#chec{
+    display: none;
+}
+
+label{
+    font-size: 40px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.cell{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 90px;
+    top: 8px;
+}
+
+@media screen and (max-width: 800px){
+    .menu{
+        left: -250px;
+        position: absolute;
+        transition: 0.5s;
+        height: 150vh;
+        z-index: 1;
+    }
+
+    .menu > .logo{
+        display: none;
+    }
+
+    input[type="checkbox"]:checked ~ nav{
+        transform: translateX(250px);
+    }
+
+    label:active{
+        color: rgb(6, 179, 6);
+    }
+}
+
+@media screen and (min-width: 800px){
+    label{
+        display: none;
+    }
+
+    .cell{
+        display: none;
+    }
+}
+/* Aqui encerra Menu celular*/
+
+/*seção de musicas mais ouvidas*/
+.musicas_maisouvidas{
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    margin: 15px 5px auto 0;
+}
+
+.musicas_maisouvidas > h2{
+    color: white;
+    margin-bottom: 30px;
+}
+
+.artista{
+    display: inline-block;
+    margin: auto auto 20px 30px;
+    background-color:rgba(167, 167, 167,0.30);
+    width: 180px;
+    height: 230px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.artista > i{
+    color: rgb(6, 172, 6);
+    position: relative;
+    left: 65px;
+    top: -15px;
+}
+
+.artista > p{
+    font-size: 15px;
+}
+
+.artista:hover{
+    opacity: 0.70;
+}
+
+@media screen and (max-width:800px){
+    .musicas_maisouvidas{
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        margin: 15px auto;
+    }
+}
+
+/*seção de musicas mais ouvidas*/
